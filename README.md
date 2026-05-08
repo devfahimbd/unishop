@@ -73,7 +73,7 @@
 ### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/devfahimbd/unishop.git
-cd unishop-manager
+cd unishop
 ```
 
 ### Step 2: Install Dependencies
@@ -143,7 +143,7 @@ cd C:\xampp\htdocs
 # Extract/copy the project folder here
 # Then:
 
-cd unishop-manager
+cd unishop
 
 copy .env.example .env
 
@@ -297,7 +297,7 @@ Create your admin account and start using UniShop Manager!
 ## Project Structure
 
 ```
-unishop-manager/
+unishop/
 ├── app/
 │   ├── Http/
 │   │   ├── Controllers/     # 12 Controllers
