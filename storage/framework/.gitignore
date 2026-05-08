@@ -1,0 +1,4 @@
+/app/Models
+/database/factories
+/database/migrations
+/database/seeders

@@ -1,0 +1,64 @@
+#!/usr/bin/env php
+<?php
+
+define('LARAVEL_START', microtime(true));
+
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| autoloading classes manually.
+|
+*/
+
+require __DIR__.'/vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Load The Application
+|--------------------------------------------------------------------------
+|
+| Next we will load the application from the container and resolve any
+| service provider bindings. Once the application is loaded we may
+| make any updates to configuration that the application needs.
+|
+*/
+
+$app = require_once __DIR__.'/bootstrap/app.php';
+
+/*
+|--------------------------------------------------------------------------
+| Run The Artisan Application
+|--------------------------------------------------------------------------
+|
+| When we run the Artisan console application, the current CLI command
+| that the user typed into the console will be executed. This allows
+| us to run any of our Laravel console commands directly.
+|
+*/
+
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+
+$status = $kernel->handle(
+    $input = new Symfony\Component\Console\Input\ArgvInput,
+    new Symfony\Component\Console\Output\ConsoleOutput
+);
+
+/*
+|--------------------------------------------------------------------------
+| Shutdown The Application
+|--------------------------------------------------------------------------
+|
+| Once Artisan has finished running, we will fire off the terminal
+| events for the application so any final processing may be done
+| before we terminate our console process.
+|
+*/
+
+$kernel->terminate($input, $status);
+
+exit($status);
