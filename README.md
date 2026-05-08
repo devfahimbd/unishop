@@ -72,7 +72,7 @@
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/unishop-manager.git
+git clone https://github.com/devfahimbd/unishop.git
 cd unishop-manager
 ```
 
