@@ -367,5 +367,5 @@ This project is open-source software licensed under the [MIT License](LICENSE).
 <p align="center">
   Built with ❤️ using Laravel 11
   <br>
-  <sub>UniShop Manager &copy; 2025 — All Rights Reserved</sub>
+  <sub>MD Fahim Sheikh &copy; 2026 — All Rights Reserved</sub>
 </p>
